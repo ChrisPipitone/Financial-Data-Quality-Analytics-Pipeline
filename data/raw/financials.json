@@ -1,0 +1,137 @@
+[
+  {
+    "source_record_id": "R001",
+    "filing_id": "F001",
+    "revenue": "1,250,000",
+    "net_income": "110000",
+    "debt": "900000",
+    "cash": "210000",
+    "currency": "USD"
+  },
+  {
+    "source_record_id": "R002",
+    "filing_id": "F002",
+    "revenue": "1,180,000",
+    "net_income": "98000",
+    "debt": "920000",
+    "cash": "205000",
+    "currency": "USD"
+  },
+  {
+    "source_record_id": "R003",
+    "filing_id": "F003",
+    "revenue": "1,090,000",
+    "net_income": "87000",
+    "debt": "950000",
+    "cash": "190000",
+    "currency": "USD"
+  },
+  {
+    "source_record_id": "R004",
+    "filing_id": "F004",
+    "revenue": "1,100,000",
+    "net_income": "89000",
+    "debt": "945000",
+    "cash": "195000",
+    "currency": "USD"
+  },
+  {
+    "source_record_id": "R005",
+    "filing_id": "F005",
+    "revenue": "845000",
+    "net_income": "42000",
+    "debt": "310000",
+    "cash": "150000",
+    "currency": "USD"
+  },
+  {
+    "source_record_id": "R006",
+    "filing_id": "F006",
+    "revenue": "830,500",
+    "net_income": "",
+    "debt": "325000",
+    "cash": "149500",
+    "currency": "USD"
+  },
+  {
+    "source_record_id": "R007",
+    "filing_id": "F007",
+    "revenue": "bad_number",
+    "net_income": "40500",
+    "debt": "330000",
+    "cash": "151000",
+    "currency": "USD"
+  },
+  {
+    "source_record_id": "R008",
+    "filing_id": "F008",
+    "revenue": "990000",
+    "net_income": "61000",
+    "debt": "410000",
+    "cash": "220000",
+    "currency": "USD"
+  },
+  {
+    "source_record_id": "R009",
+    "filing_id": "F009",
+    "revenue": "940000",
+    "net_income": "54000",
+    "debt": "420000",
+    "cash": "210000",
+    "currency": "USD"
+  },
+  {
+    "source_record_id": "R010",
+    "filing_id": "F010",
+    "revenue": "880000",
+    "net_income": "47000",
+    "debt": "430000",
+    "cash": "205000",
+    "currency": "USD"
+  },
+  {
+    "source_record_id": "R011",
+    "filing_id": "F011",
+    "revenue": "760000",
+    "net_income": "35000",
+    "debt": "",
+    "cash": "175000",
+    "currency": "USD"
+  },
+  {
+    "source_record_id": "R012",
+    "filing_id": "F012",
+    "revenue": "775000",
+    "net_income": "36000",
+    "debt": "280000",
+    "cash": "180000",
+    "currency": "USD"
+  },
+  {
+    "source_record_id": "R013",
+    "filing_id": "F013",
+    "revenue": "1,500,000",
+    "net_income": "125000",
+    "debt": "0",
+    "cash": "450000",
+    "currency": "USD"
+  },
+  {
+    "source_record_id": "R014",
+    "filing_id": "F014",
+    "revenue": "1,540,000",
+    "net_income": "130000",
+    "debt": "50000",
+    "cash": "470000",
+    "currency": "USD"
+  },
+  {
+    "source_record_id": "R015",
+    "filing_id": "F015",
+    "revenue": "1,610,000",
+    "net_income": null,
+    "debt": "70000",
+    "cash": "0",
+    "currency": "USD"
+  }
+]

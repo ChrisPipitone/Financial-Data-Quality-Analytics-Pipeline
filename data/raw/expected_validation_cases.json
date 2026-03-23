@@ -1,0 +1,30 @@
+[
+  {
+    "source_record_id": "R006",
+    "field_name": "net_income",
+    "error_type": "missing_value",
+    "raw_value": "",
+    "message": "Net income missing; should normalize to NULL and continue."
+  },
+  {
+    "source_record_id": "R007",
+    "field_name": "revenue",
+    "error_type": "invalid_numeric",
+    "raw_value": "bad_number",
+    "message": "Revenue is not parseable as a numeric value."
+  },
+  {
+    "source_record_id": "R011",
+    "field_name": "debt",
+    "error_type": "missing_value",
+    "raw_value": "",
+    "message": "Debt missing; record remains loadable with NULL if business rules allow."
+  },
+  {
+    "source_record_id": "R015",
+    "field_name": "cash",
+    "error_type": "zero_value_edge_case",
+    "raw_value": "0",
+    "message": "Cash is zero; watch for divide-by-zero in leverage ratio reports."
+  }
+]
