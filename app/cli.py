@@ -1,7 +1,7 @@
 import argparse
 from pathlib import Path
 
-from app.ingest import ingest_companies
+from app.ingest import ingest_input
 
 
 def run_cli():
@@ -27,8 +27,7 @@ def run_cli():
     if args.command == "ingest":
         print(f"INGEST input={args.input}")
         input_path = Path(args.input)
-        # ingest_input(input_path)
-        ingest_companies(input_path)
+        ingest_input(input_path)
 
     elif args.command == "validate":
         print(f"VALIDATE input={args.input}")
