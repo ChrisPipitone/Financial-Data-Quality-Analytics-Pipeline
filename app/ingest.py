@@ -1,6 +1,7 @@
 import csv
 import json
 from pathlib import Path
+from typing import Iterator
 
 
 def ingest_input(input_path: Path) -> None:
@@ -18,7 +19,7 @@ def ingest_input(input_path: Path) -> None:
         raise ValueError(f"Input path does not exist {input_path}")
 
 
-def iterate_supported_files(root: Path):
+def iterate_supported_files(root: Path) -> Iterator[Path]:
     """
     Return supported raw data files from a directory.
     Ignores unsupported files. Non-recursive.
@@ -59,6 +60,15 @@ def ingest_companies(path: Path) -> None:
 
 def ingest_filings(path: Path) -> None:
     """Ingest filing data from a CSV file."""
+    print("Ingesting filings...")
+
+    output_file = Path("data/processed/filings.jsonl")
+    output_file.parent.mkdir(parents=True, exist_ok=True)
+
+    with path.open("r", encoding="utf-8") as csvfile:
+        with output_file.open("w", encoding="utf-8") as outfile:
+            for row in csv.DictReader(csvfile):
+                outfile.write(json.dumps(row) + "\n")
 
 
 def ingest_financial_metrics(path: Path) -> None:
