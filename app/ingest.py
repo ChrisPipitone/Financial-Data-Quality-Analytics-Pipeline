@@ -39,8 +39,8 @@ def ingest_file(path: Path) -> None:
         ingest_companies(path)
     elif path.name == "filings.csv":
         ingest_filings(path)
-    elif path.name == "financial_metrics.json":
-        ingest_financial_metrics(path)
+    elif path.name == "financials.json":
+        ingest_financials(path)
     else:
         log_unknown_file(path)
 
@@ -71,9 +71,22 @@ def ingest_filings(path: Path) -> None:
                 outfile.write(json.dumps(row) + "\n")
 
 
-def ingest_financial_metrics(path: Path) -> None:
+def ingest_financials(path: Path) -> None:
     """Ingest financial metrics from a JSON file."""
+    print("Ingesting financials...")
+
+    output_file = Path("data/processed/financials.jsonl")
+    output_file.parent.mkdir(parents=True, exist_ok=True)
+
+    with path.open("r", encoding="utf-8") as jsonfile:
+        data = json.load(jsonfile)
+
+        with output_file.open("w", encoding="utf-8") as outfile:
+            for entry in data:
+                json.dump(entry, outfile)
+                outfile.write("\n")
 
 
 def log_unknown_file(path: Path) -> None:
     """Log an unsupported or unrecognized file."""
+    print(f"Unsupported or unrecognized file {path}")
