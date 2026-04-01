@@ -1,7 +1,8 @@
 import csv
 import json
 from pathlib import Path
-from typing import Iterator
+
+from app.validate import iterate_supported_files, log_unknown_file
 
 
 def ingest_input(input_path: Path) -> None:
@@ -17,17 +18,6 @@ def ingest_input(input_path: Path) -> None:
             ingest_file(path)
     else:
         raise ValueError(f"Input path does not exist {input_path}")
-
-
-def iterate_supported_files(root: Path) -> Iterator[Path]:
-    """
-    Return supported raw data files from a directory.
-    Ignores unsupported files. Non-recursive.
-    """
-    SUPPORTED_EXTENSIONS = {".csv", ".json"}
-    for path in root.iterdir():
-        if path.is_file() and path.suffix.lower() in SUPPORTED_EXTENSIONS:
-            yield path
 
 
 def ingest_file(path: Path) -> None:
@@ -85,8 +75,3 @@ def ingest_financials(path: Path) -> None:
             for entry in data:
                 json.dump(entry, outfile)
                 outfile.write("\n")
-
-
-def log_unknown_file(path: Path) -> None:
-    """Log an unsupported or unrecognized file."""
-    print(f"Unsupported or unrecognized file {path}")
