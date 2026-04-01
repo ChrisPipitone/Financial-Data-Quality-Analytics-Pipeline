@@ -2,6 +2,7 @@ import argparse
 from pathlib import Path
 
 from app.ingest import ingest_input
+from app.validate import validate_input
 
 
 def run_cli():
@@ -31,6 +32,8 @@ def run_cli():
 
     elif args.command == "validate":
         print(f"VALIDATE input={args.input}")
+        validate_path = Path(args.input)
+        validate_input(validate_path)
 
     elif args.command == "load":
         print(f"LOAD db={args.db}")
