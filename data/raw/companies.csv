@@ -1,4 +1,5 @@
 company_id,company_name,ticker,sector
+C000,,,Energy
 C001,Northstar Energy Holdings,NSEH,Energy
 C002,Blue Harbor Logistics,BHL,Industrials
 C003,Summit Retail Group,SRG,Consumer
